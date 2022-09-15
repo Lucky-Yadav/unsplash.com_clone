@@ -15,12 +15,12 @@ function App() {
   return (
     <div className="App">
       {/* <Routes></Routes> */}
-      {/* <Blog /> */}
+      {/* <Home /> */}
       <Routes>
-        <Route path="/" element={<Navbar ><Home/></Navbar>}></Route>
+        {/* <Route path="/" element={<Navbar ><Home/></Navbar>}></Route> */}
         <Route path="/" element={<Home/> }></Route>
-        <Route path="/error" element={<Error />}></Route>
-        <Route path="/advertise" element={<Advertise />}></Route>
+        {/* <Route path="/error" element={<Error />}></Route>
+        <Route path="/advertise" element={<Advertise />}></Route> */}
       </Routes>
       {/* <Routes>
         <Route path="/Inputform" element={<Inputform />}></Route>

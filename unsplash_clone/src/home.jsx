@@ -1,5 +1,5 @@
 // import React from "react";
-import "./App.css";
+import "./home.css";
 import banner from "./banner.png";
 import heart from "./heart-black.svg";
 import squarespace from "./squarespace.svg";
@@ -226,7 +226,7 @@ console.log("first")
       </div>
       <div className="main">
         <InfiniteScroll
-          className="App"
+          className="app"
           dataLength={images.length}
           next={FetchImages}
           hasMore={true}
