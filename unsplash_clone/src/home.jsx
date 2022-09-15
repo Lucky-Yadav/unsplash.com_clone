@@ -14,10 +14,10 @@ import search from "./components/search";
 import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
 var index = 1;
-function App() {
+function Home() {
   const [images, setImage] = useState([]);
   // const [search, setsearch] = useState([]);
-
+console.log("first")
   const [images2, setimage2] = React.useState([]);
   const [images3, setimage3] = React.useState([]);
   const [query, setquery] = React.useState(["office"]);
@@ -472,7 +472,7 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
 
 
 //   const [origImage, setOrigImage] = useState("");
