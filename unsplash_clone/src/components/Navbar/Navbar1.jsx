@@ -321,8 +321,8 @@ export const Navbar1 = () => {
                   className="onHover"
                   alt="ProfilePic"
                   style={{
-                    width: "50px",
-                    height: "50px",
+                    width: "70px",
+                    height: "auto",
                     borderRadius: "100%",
                   }}
                   src={payload.profilepic}

@@ -69,7 +69,7 @@ export const LogIn = () => {
 
     return (
         <Box sx={{display:"flex",flexDirection:"column", alignItems:"center", justifyContent:"center"}}>
-            <img alt="Logo" style={{width:"70px", marginTop:12}} src="https://unsplash.com/assets/core/logo-black-df2168ed0c378fa5506b1816e75eb379d06cfcd0af01e07a2eb813ae9b5d7405.svg" />
+            <img alt="Logo" style={{width:"70px", height:"auto", marginTop:12}} src="https://unsplash.com/assets/core/logo-black-df2168ed0c378fa5506b1816e75eb379d06cfcd0af01e07a2eb813ae9b5d7405.svg" />
             <h1 style={{marginTop:30,marginBottom:-7, fontSize:"34px"}}>Login</h1>
             <p>Welcome Back</p>
 

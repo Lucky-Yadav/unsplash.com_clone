@@ -158,7 +158,7 @@ export const SignUp = () => {
             <Box className="formPart" sx={{boxSizing:"border-box", display:"flex", height:"100vh", padding:"400px 10% 10% 10%", overflowY:"scroll", flexDirection:"column", alignItems:"center", justifyContent:"center"}}>
 
             <h1 style={{fontSize:48}}>Join Unsplash</h1>
-            <p style={{marginTop:-10}}>Already have an Account? <Link className="onHover" to="/login" style={{marginLeft:-8, textDecoration:"underline"}}>Login</Link> </p>
+            <p style={{marginTop:10}}>Already have an Account? <Link className="onHover" to="/login" style={{marginLeft:-8, textDecoration:"underline"}}>Login</Link> </p>
             
 
 
