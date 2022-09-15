@@ -1,5 +1,5 @@
 // import React from "react";
-import "./home.css";
+import "./App.css";
 import banner from "./banner.png";
 import heart from "./heart-black.svg";
 import squarespace from "./squarespace.svg";
@@ -14,25 +14,24 @@ import search from "./components/search";
 import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
 var index = 1;
-function Home() {
+function App() {
   const [images, setImage] = useState([]);
   // const [search, setsearch] = useState([]);
-console.log("first")
+
   const [images2, setimage2] = React.useState([]);
   const [images3, setimage3] = React.useState([]);
-  const [query, setquery] = React.useState(["office"]);
+  const [query, setquery] = React.useState("office");
   // const [index, setindex] = React.useState([1]);
 
   useEffect(() => {
     // if (images.length != 0) {
-      
+
     // }
-   FetchImages()
+    FetchImages();
     // alert("shown")
   }, [setquery]);
 
   const FetchImages = (count = 10) => {
-    
     // const apiRoot = "https://api.unsplash.com";
     // const accessKey = process.env.REACT_APP_ACCESSKEY;
     // console.log(index);
@@ -75,12 +74,17 @@ console.log("first")
       // background-color: grey;
     }
   `;
-   function handleKeyDown(e) {
-    if (e.key === 'Enter') {
+  const searchimage = (value) => {
+    setImage([]);
+    setimage2([]);
+    setimage3([]);
+    setquery([value]);
+    handlesearchleave();
+  };
+  function handleKeyDown(e) {
+    if (e.key === "Enter") {
       console.log(e.target.value);
-      setquery([`${e.target.value}`]);
-       
-      handlesearchleave();
+      searchimage(e.target.value);
     }
   }
 
@@ -120,40 +124,36 @@ console.log("first")
                   {/* <Link to="/search"> wallpapers </Link> */}
                   <p
                     onClick={() => {
-                      setquery(["wallpapers"]);
-                      handlesearchleave();
+                      // setquery(["wallpapers"]);
+                      searchimage("wallpapers");
                     }}
                   >
                     wallpapers
                   </p>
                   <p
                     onClick={() => {
-                      setquery(["travel"]);
-                      handlesearchleave();
+                      searchimage("travel");
                     }}
                   >
                     travel
                   </p>
                   <p
                     onClick={() => {
-                      setquery(["home"]);
-                      handlesearchleave();
+                      searchimage("home");
                     }}
                   >
                     home
                   </p>
                   <p
                     onClick={() => {
-                      setquery(["stage lights"]);
-                      handlesearchleave();
+                      searchimage("stage lights");
                     }}
                   >
                     stagelights
                   </p>
                   <p
                     onClick={() => {
-                      setquery(["yoga"]);
-                      handlesearchleave();
+                      searchimage("yoga");
                     }}
                   >
                     yoga
@@ -163,40 +163,35 @@ console.log("first")
                 <div className="trending_topics">
                   <p
                     onClick={() => {
-                      setquery(["Wallpapers"]);
-                      handlesearchleave();
+                      searchimage("wallpaper");
                     }}
                   >
                     Wallpapers
                   </p>
                   <p
                     onClick={() => {
-                      setquery(["Arts & Culture"]);
-                      handlesearchleave();
+                      searchimage("Arts & Culture");
                     }}
                   >
                     Arts & Culture
                   </p>
                   <p
                     onClick={() => {
-                      setquery(["3D Renders"]);
-                      handlesearchleave();
+                      searchimage("3D Renders");
                     }}
                   >
                     3D Renders
                   </p>
                   <p
                     onClick={() => {
-                      setquery(["Architecture"]);
-                      handlesearchleave();
+                      searchimage("Architecture");
                     }}
                   >
                     Architecture
                   </p>
                   <p
                     onClick={() => {
-                      setquery(["Textures & Patterns"]);
-                      handlesearchleave();
+                      searchimage("Textures & Patterns");
                     }}
                   >
                     Textures & Patterns
@@ -226,7 +221,7 @@ console.log("first")
       </div>
       <div className="main">
         <InfiniteScroll
-          className="app"
+          className="App"
           dataLength={images.length}
           next={FetchImages}
           hasMore={true}
@@ -472,8 +467,7 @@ console.log("first")
   );
 }
 
-export default Home;
-
+export default App;
 
 //   const [origImage, setOrigImage] = useState("");
 //   const [origImageFile, setOrigImageFile] = useState("");
