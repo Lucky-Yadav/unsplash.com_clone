@@ -1,3 +1,4 @@
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden;
@@ -13,8 +14,9 @@ body {
     background: rgba(0, 0, 0, 0.3);
 } */
 .App {
-  display: flex;
+  display: grid;
   padding-top: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 24px;
 }
 .card {
@@ -170,7 +172,12 @@ body {
 .ppjpj {
       display: flex;
     flex-direction: column;
-    padding: 20px;
+    /* padding: 20px; */
+    margin: 14px;
+    margin-right: 0px;
+    margin-left: 12px;
+    padding-right: 10px;
+    padding-bottom: 10px;
         bottom: 0;
     left: 0;
     position: absolute;
@@ -178,6 +185,7 @@ body {
     top: 0;
     background-image: linear-gradient(180deg, #bcbcc3, transparent);
     background-image: linear-gradient(0deg, #6a6a6b, transparent );
+    /* background: 20%; */
 }
 .top3 {
   display: grid;

@@ -20,7 +20,7 @@ function App() {
 
   const [images2, setimage2] = React.useState([]);
   const [images3, setimage3] = React.useState([]);
-  const [query, setquery] = React.useState(["office"]);
+  const [query, setquery] = React.useState("office");
   // const [index, setindex] = React.useState([1]);
 
   useEffect(() => {
@@ -75,12 +75,18 @@ function App() {
       // background-color: grey;
     }
   `;
+  const searchimage = (value) => {    
+      setImage([]);
+      setimage2([]);
+      setimage3([]);
+      setquery([value]);
+      handlesearchleave();
+  }
    function handleKeyDown(e) {
     if (e.key === 'Enter') {
       console.log(e.target.value);
-      setquery([`${e.target.value}`]);
+      searchimage(e.target.value)
        
-      handlesearchleave();
     }
   }
 
@@ -120,40 +126,36 @@ function App() {
                   {/* <Link to="/search"> wallpapers </Link> */}
                   <p
                     onClick={() => {
-                      setquery(["wallpapers"]);
-                      handlesearchleave();
+                      // setquery(["wallpapers"]);
+                      searchimage("wallpapers")
                     }}
                   >
                     wallpapers
                   </p>
                   <p
                     onClick={() => {
-                      setquery(["travel"]);
-                      handlesearchleave();
+                      searchimage("travel");
                     }}
                   >
                     travel
                   </p>
                   <p
                     onClick={() => {
-                      setquery(["home"]);
-                      handlesearchleave();
+                      searchimage("home");
                     }}
                   >
                     home
                   </p>
                   <p
                     onClick={() => {
-                      setquery(["stage lights"]);
-                      handlesearchleave();
+                      searchimage("stage lights");
                     }}
                   >
                     stagelights
                   </p>
                   <p
                     onClick={() => {
-                      setquery(["yoga"]);
-                      handlesearchleave();
+                      searchimage("yoga");
                     }}
                   >
                     yoga
@@ -163,40 +165,35 @@ function App() {
                 <div className="trending_topics">
                   <p
                     onClick={() => {
-                      setquery(["Wallpapers"]);
-                      handlesearchleave();
+                      searchimage("wallpaper");
                     }}
                   >
                     Wallpapers
                   </p>
                   <p
                     onClick={() => {
-                      setquery(["Arts & Culture"]);
-                      handlesearchleave();
+                      searchimage("Arts & Culture");
                     }}
                   >
                     Arts & Culture
                   </p>
                   <p
                     onClick={() => {
-                      setquery(["3D Renders"]);
-                      handlesearchleave();
+                      searchimage("3D Renders");
                     }}
                   >
                     3D Renders
                   </p>
                   <p
                     onClick={() => {
-                      setquery(["Architecture"]);
-                      handlesearchleave();
+                      searchimage("Architecture");
                     }}
                   >
                     Architecture
                   </p>
                   <p
                     onClick={() => {
-                      setquery(["Textures & Patterns"]);
-                      handlesearchleave();
+                      searchimage("Textures & Patterns");
                     }}
                   >
                     Textures & Patterns
