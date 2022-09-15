@@ -1,0 +1,323 @@
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+.main {
+  width: 85%;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* .img {
+  
+    background: rgba(0, 0, 0, 0.3);
+} */
+.App {
+  display: grid;
+  padding-top: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+}
+.card {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.card img {
+  cursor: pointer;
+  width: 100%;
+  margin: 10px;
+  border-radius: 1px;
+}
+.image_box {
+  width: auto;
+}
+.banner img {
+  width: 100%;
+  padding-bottom: 45px;
+}
+.top_data {
+  position: absolute;
+  color: #ffffff;
+  align-items: center;
+  top: 14%;
+  left: 22%;
+}
+.top_data p {
+  top: 30%;
+      font-size: 18px;
+      font-weight: 400;
+}
+.top_data h1 {
+  font-weight: 700;
+  font-size: 46px;
+    line-height: 1.2;
+}
+.search_box {
+  width: 150%;
+  display: flex;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 6px;
+}
+.search_box input{
+  border: none;
+  width: 500%;
+  /* background-color: transparent; */
+  resize: none;
+  outline: none;
+}
+.bottom {
+    /* align-items: flex-end; */
+    color: #ffffff8c;
+    width: 97%;
+    display: flex;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-shadow: 0 1px 8px #0000001a;
+    margin-top: -95px;
+    justify-content: space-between;
+    /* margin-bottom: 20px; */
+}
+.first1 p{
+    font-size: small;
+}
+.second2 p{
+    font-size: small;
+}
+.third3 {
+    width: 100%;
+    margin-top: -20px;
+    padding-left: 50%;
+}
+.third_3 p {
+    font-size: small;
+    padding-left: 38%;
+}
+.third3 img {
+    width: 50%;
+}
+.top2 {
+    display: block;
+}
+/* .top2 p {
+    position: absolute;
+    color: #9f9f9f;
+    background-color: #e9eaea;
+    padding: 5px 13px;
+    border-radius: 5px;
+    left: 30%;
+} */
+/* .top3 {
+    display: block;
+} */
+/* .top3 p {
+    position: absolute;
+    color: #9f9f9f;
+    background-color: #e9eaea;
+    padding: 5px 13px;
+    border-radius: 5px;
+    left: 60%;
+} */
+.top4 {
+        height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+/* .top4 p {
+    color: #9f9f9f;
+    background-color: #e9eaea;
+    padding: 5px 13px;
+    border-radius: 5px;
+    left: 90%;
+} */
+.top6 {
+      display: grid;
+    gap: 20px;
+    grid-template-areas: "left right";
+    grid-template-columns: minmax(0,min-content) auto;
+      transition: opacity .1s ease-in-out,visibility .1s ease-in-out;
+}
+.mousehover {
+  box-shadow:  0.5px 0.5px 2px 2px #767676;
+  background-color: #ffffff;
+  color: grey;
+  padding: 4%;
+  border-radius: 6px;
+  width: 147%;
+  margin-top: 5px;
+
+}
+.trending_searches, .trending_topics, .trending_collections {
+  display: flex;
+  gap: 20px;
+  
+}
+.trending_searches p, .trending_topics p, .trending_collections p {
+  cursor: pointer;
+  border: 1px solid gray;
+  padding: 8px 10px;
+  font-size: 13px;
+  border-radius: 4px;
+}
+.kelbm {
+      height: 100%;
+
+}
+.ppjpj {
+      display: flex;
+    flex-direction: column;
+    /* padding: 20px; */
+    margin: 14px;
+    margin-right: 0px;
+    margin-left: 12px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+        bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-image: linear-gradient(180deg, #bcbcc3, transparent);
+    background-image: linear-gradient(0deg, #6a6a6b, transparent );
+    /* background: 20%; */
+}
+.top3 {
+  display: grid;
+    gap: 20px;
+    grid-template-areas: "left right";
+    grid-template-columns: minmax(0,min-content) auto;
+}
+.image_main_div {
+    position: relative;
+}
+.topimg {
+  display: flex;
+  width: 100%;
+}
+.right_img {
+  margin-top: -13px;
+    display: grid;
+    gap: 8px;
+    grid-area: right;
+    grid-auto-flow: column;
+    justify-self: end;
+}
+.left_img {
+      align-self: flex-start;
+}
+/* .imagehover {
+  display: flex;
+    flex-direction: column;
+    padding: 20px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+} */
+/* .right_img img{
+      background-color: #ffffffe6;
+    border: 1px solid #0000;
+    box-shadow: 0 1px 2px #0000000f;
+    color: #767676;
+    font-size: 14px;
+    height: 32px;
+    line-height: 30px;
+    padding: 0 11px;
+} */
+.right_img img {
+      position: relative;
+    top: -1px;
+    width: 17px;
+    margin-top: 23px;
+    color: #9f9f9f;
+    background-color: #e9eaea;
+    padding: 10px 13px;
+    border-radius: 5px;
+}
+.right_img p {
+  font-size: x-large;
+  cursor: pointer;
+    color: #9f9f9f;
+    background-color: #e9eaea;
+    padding: 3px 13px;
+    border-radius: 5px; 
+}
+.bottom4 {
+      grid-template-columns: minmax(0,min-content) auto;
+    margin-top: auto;
+        display: grid;
+    gap: 8px;
+}
+.left-bottom4 {
+      height: 32px;
+}
+.span2 {
+      align-items: center;
+    display: inline-flex;
+    max-width: 100%;
+    padding: 0%;
+    margin-top: -15%;
+}
+.span2 p {
+  color: #f0e9e9;
+  font-size: 14px;
+  border-radius: 4px;
+  width: 200px;
+}
+
+.span_jss1 {
+      display: inline-block;
+      display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+.span_jss1 img {
+      background-color: #eee;
+    border-radius: 50%;
+    display: block;
+    /* overflow: hidden; */
+        width: 32px;
+    aspect-ratio: auto 32 / 32;
+    height: 32px;
+}
+.right_bottom4 {
+        display: flex;
+    justify-self: end;
+    transition: opacity .1s ease-in-out,visibility .1s ease-in-out;
+    cursor: pointer;
+}
+.svgjss4 {
+  display: inline-flex;
+    justify-content: center;
+    background-color: #ffffffe6;
+    border: 1px solid #0000;
+    box-shadow: 0 1px 2px #0000000f;
+    color: #767676;
+    height: 32px;
+    line-height: 30px;
+    padding: 0 11px;
+    fill: currentColor;
+    border: 1px solid #0000;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    transition: all .1s ease-in-out;
+    text-decoration-skip-ink: auto;
+}
+.svgjss4 svg {
+  padding-top: 5px;
+  height: 24px;
+  width: 14px;
+}
+
+.hidden {
+  display: none;
+  
+}
