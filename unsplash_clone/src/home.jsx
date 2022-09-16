@@ -1,5 +1,5 @@
 // import React from "react";
-import "./App.css";
+import "./home.css";
 import banner from "./banner.png";
 import heart from "./heart-black.svg";
 import squarespace from "./squarespace.svg";
@@ -14,7 +14,7 @@ import search from "./components/search";
 import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
 var index = 1;
-function App() {
+function Home() {
   const [images, setImage] = useState([]);
   // const [search, setsearch] = useState([]);
 
@@ -221,7 +221,7 @@ function App() {
       </div>
       <div className="main">
         <InfiniteScroll
-          className="App"
+          className="appa"
           dataLength={images.length}
           next={FetchImages}
           hasMore={true}
@@ -231,7 +231,7 @@ function App() {
             <div>
               <div>
                 {images?.map((image) => (
-                  <div className="card">
+                  <div className="carda">
                     <div
                       key={image.id}
                       className="image_main_div"
@@ -308,7 +308,7 @@ function App() {
             <div>
               <div>
                 {images2?.map((image) => (
-                  <div className="card">
+                  <div className="carda">
                     <div
                       key={image.id}
                       className="image_main_div"
@@ -385,7 +385,7 @@ function App() {
             <div>
               <div>
                 {images3?.map((image) => (
-                  <div className="card">
+                  <div className="carda">
                     <div
                       key={image.id}
                       className="image_main_div"
@@ -467,7 +467,7 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
 
 //   const [origImage, setOrigImage] = useState("");
 //   const [origImageFile, setOrigImageFile] = useState("");
