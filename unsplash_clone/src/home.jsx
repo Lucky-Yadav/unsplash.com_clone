@@ -1,6 +1,6 @@
 // import React from "react";
 import "./home.css";
-import banner from "./banner.png";
+// import bannera from "https://api.unsplash.com/photos/random?&client_id=DXYD_GyjDUwagXbKcj_4HvYGwkxDp8HKCkwXUJ12rT8&count=1";
 import heart from "./heart-black.svg";
 import squarespace from "./squarespace.svg";
 import React, { useState, useEffect } from "react";
@@ -21,6 +21,7 @@ function Home() {
   const [images2, setimage2] = React.useState([]);
   const [images3, setimage3] = React.useState([]);
   const [query, setquery] = React.useState("office");
+  const [banner, setbanner] = useState("second")
   // const [index, setindex] = React.useState([1]);
 
   useEffect(() => {
@@ -35,6 +36,10 @@ function Home() {
     // const apiRoot = "https://api.unsplash.com";
     // const accessKey = process.env.REACT_APP_ACCESSKEY;
     // console.log(index);
+    axios.get("https://api.unsplash.com/photos/random?&client_id=DXYD_GyjDUwagXbKcj_4HvYGwkxDp8HKCkwXUJ12rT8&count=1").then((res) => {
+      console.log(res.data[0].urls.full);
+      setbanner(res.data[0].urls.raw);
+    })
     axios
       .get(
         `https://api.unsplash.com/search/photos?page=${index}&per_page=10&query=${query}&client_id=d-LkQ147e_thL57BcZo3md05pDVFELieWfQ3GFKX6go&count=${count}`
@@ -200,9 +205,14 @@ function Home() {
               </div>
             </div>
           </div>
+          <p>Trending: flower, wallpapers, backgrounds, happy, love</p>
         </div>
         <div className="banner">
-          <img src={banner} alt="" onClick={handlesearchleave} />
+          <img
+            src={banner}
+            alt=""
+            onClick={handlesearchleave}
+          />
         </div>
         <div className="bottom">
           <div className="first1">

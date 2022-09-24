@@ -11,7 +11,8 @@ export const Blogcard1 = () => {
           <h2>A look back on May</h2>
           <span>Annie spratt - </span>
           <span>June 7, 2022</span>
-          </div>
+        </div>
+        
       </div>
     </div>
   )

@@ -6,7 +6,7 @@ import { Box } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { isLogin } from "../Redux/action";
 
-export const Navbar = () => {
+export const Navbar = ({children}) => {
 
    const dispatch = useDispatch()
    // const { logedIn } = useSelector((state) => state)
@@ -25,7 +25,8 @@ export const Navbar = () => {
         <Box className="navbar23">
          <Navbar1 />
          <Navbar2 />
-        </Box>
+           </Box>
+           <div className="navchild">{ children}</div>
       </>
      )
 }
