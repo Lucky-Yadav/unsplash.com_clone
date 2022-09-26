@@ -212,6 +212,7 @@ export const Navbar1 = () => {
                 padding: 2,
                 paddingBottom: 12,
                 borderRadius: 4,
+                paddingLeft
               }}
             >
               <p>Visual Search</p>
