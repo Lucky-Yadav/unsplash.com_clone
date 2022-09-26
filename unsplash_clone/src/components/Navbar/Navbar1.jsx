@@ -24,9 +24,6 @@ export const Navbar1 = () => {
 
     const Search = styled('div')(({ theme }) => ({
         position: 'sticky',
-        top:2,
-        left:65,
-        right:250,
         display:"flex",
         borderRadius: theme.shape.borderRadius,
         backgroundColor: alpha(theme.palette.common.black, 0.15),
@@ -160,12 +157,13 @@ export const Navbar1 = () => {
 
     return (
       <Box
-        sx={{
-          display: "flex",
-          padding: 0.8,
-          alignItems: "center",
-          justifyContent: "center",
-        }}
+        // sx={{
+        //   display: "flex",
+        //   padding: 0.8,
+        //   alignItems: "center",
+        //   justifyContent: "center",
+        // }}
+        className="nav_topa"
       >
         <img
           alt="Logo"
@@ -174,25 +172,25 @@ export const Navbar1 = () => {
             width: "55px",
             height: "55px",
             left: 2,
-            borderRadius: "100%",
+            borderRadius: "50%",
           }}
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf31fI-8KqbQk8HKfgCdJTZ_ZpMe1bdtKArA&usqp=CAU"
         />
 
-        <Search>
+        <Search className="nav_search">
           <SearchIconWrapper>
             <SearchIcon />
           </SearchIconWrapper>
           <StyledInputBase placeholder="Search free high-resolution photos" />
           <Button onClick={handleClick3} aria-describedby={id3}>
             <ImageSearchIcon
-              className="onHover"
-              sx={{
-                position: "relative",
-                display: "flex",
-                alignItems: "center",
-                padding: 1,
-              }}
+              className="onHovera"
+              // sx={{
+              //   position: "relative",
+              //   display: "flex",
+              //   alignItems: "center",
+              //   padding: 1,
+              // }}
             />
           </Button>
           <Popover

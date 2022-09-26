@@ -1,6 +1,6 @@
 // import React from "react";
 import "./home.css";
-// import bannera from "https://api.unsplash.com/photos/random?&client_id=DXYD_GyjDUwagXbKcj_4HvYGwkxDp8HKCkwXUJ12rT8&count=1";
+import banner from "./banner.png";
 import heart from "./heart-black.svg";
 import squarespace from "./squarespace.svg";
 import React, { useState, useEffect } from "react";
@@ -20,8 +20,10 @@ function Home() {
 
   const [images2, setimage2] = React.useState([]);
   const [images3, setimage3] = React.useState([]);
-  const [query, setquery] = React.useState("office");
-  const [banner, setbanner] = useState("second")
+  const [query, setquery] = React.useState("random");
+  const [noresult, setnoresult] = useState(false)
+  const [serchvalue, setserchvalue] = useState("your request")
+  // const [banner, setbanner] = useState("second")
   // const [index, setindex] = React.useState([1]);
 
   useEffect(() => {
@@ -36,10 +38,14 @@ function Home() {
     // const apiRoot = "https://api.unsplash.com";
     // const accessKey = process.env.REACT_APP_ACCESSKEY;
     // console.log(index);
-    axios.get("https://api.unsplash.com/photos/random?&client_id=DXYD_GyjDUwagXbKcj_4HvYGwkxDp8HKCkwXUJ12rT8&count=1").then((res) => {
-      console.log(res.data[0].urls.full);
-      setbanner(res.data[0].urls.raw);
-    })
+    // axios
+    //   .get(
+    //     "https://api.unsplash.com/photos/random?&query=banner&orientation=landscape&client_id=d-LkQ147e_thL57BcZo3md05pDVFELieWfQ3GFKX6go&count=1"
+    //   )
+    //   .then((res) => {
+    //     console.log(res.data[0].urls.full);
+    //     setbanner(res.data[0].urls.regular);
+    //   });
     axios
       .get(
         `https://api.unsplash.com/search/photos?page=${index}&per_page=10&query=${query}&client_id=d-LkQ147e_thL57BcZo3md05pDVFELieWfQ3GFKX6go&count=${count}`
@@ -69,6 +75,10 @@ function Home() {
         setimage3([...images3, ...res.data.results]);
       });
     index += 3;
+    if (images.length === 0) {
+        console.log(images.length)
+        setnoresult(true);
+      }
   };
 
   const [ishovering, setishovering] = useState(-1);
@@ -84,6 +94,9 @@ function Home() {
     setimage2([]);
     setimage3([]);
     setquery([value]);
+    // FetchImages()
+    console.log(value);
+    setserchvalue(value)
     handlesearchleave();
   };
   function handleKeyDown(e) {
@@ -92,6 +105,7 @@ function Home() {
       searchimage(e.target.value);
     }
   }
+
 
   function handlesearchleave(e) {
     // console.log(e);
@@ -114,8 +128,8 @@ function Home() {
             <input
               type="text"
               placeholder="Search free high-resolution photos"
-              onClick={handlesearchhovering}
-              onKeyDown={handleKeyDown}
+              onClick={() => handlesearchhovering()}
+              onKeyDown={(e) => handleKeyDown(e)}
             />
           </div>
           <div>
@@ -208,11 +222,7 @@ function Home() {
           <p>Trending: flower, wallpapers, backgrounds, happy, love</p>
         </div>
         <div className="banner">
-          <img
-            src={banner}
-            alt=""
-            onClick={handlesearchleave}
-          />
+          <img src={banner} alt="" onClick={handlesearchleave} />
         </div>
         <div className="bottom">
           <div className="first1">
@@ -230,6 +240,9 @@ function Home() {
         </div>
       </div>
       <div className="main">
+        <div className={`${noresult == true ? "hidden" : " noresults"} `}>
+          Results not found for "{serchvalue}"
+        </div>
         <InfiniteScroll
           className="appa"
           dataLength={images.length}

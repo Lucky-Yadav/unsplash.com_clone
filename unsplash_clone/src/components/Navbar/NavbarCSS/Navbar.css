@@ -1,6 +1,6 @@
-body::-webkit-scrollbar{
+/* body::-webkit-scrollbar{
     display: none;
-}
+} */
 
 .navbar23{
     position: sticky;
@@ -9,6 +9,15 @@ body::-webkit-scrollbar{
     right: 0;
     background-color: white;
     z-index: 10;
+}
+.nav_topa {
+    margin: 0%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+.nav_search {
+    width: 100px;
 }
 
 
