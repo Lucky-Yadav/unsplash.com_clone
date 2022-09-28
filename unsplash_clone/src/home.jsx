@@ -252,7 +252,7 @@ function Home() {
         >
           <div className="image_box">
             <div>
-              <div>
+              <div className="grids">
                 {images?.map((image) => (
                   <div className="carda">
                     <div
