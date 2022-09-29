@@ -181,53 +181,56 @@ export const Navbar1 = () => {
           <SearchIconWrapper>
             <SearchIcon />
           </SearchIconWrapper>
-          <search className="nav_search">
-            <StyledInputBase placeholder="Search free high-resolution photos" />
+          <div className="search_rapper">
+            <search className="nav_search">
+              <StyledInputBase placeholder="Search free high-resolution photos" />
 
-            <Popover
-              className={id3}
-              open={open3}
-              anchorEl={anchorEl3}
-              onClose={handleClose3}
-              anchorReference="anchorPosition"
-              anchorPosition={{ top: 75, left: 80 }}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "right",
-              }}
-            >
-              <Box
-                sx={{
-                  width: "550px",
-                  height: "300px",
-                  padding: 2,
-                  paddingBottom: 12,
-                  borderRadius: 4,
+              <Popover
+                className={id3}
+                open={open3}
+                anchorEl={anchorEl3}
+                onClose={handleClose3}
+                anchorReference="anchorPosition"
+                anchorPosition={{ top: 75, left: 80 }}
+                anchorOrigin={{
+                  vertical: "bottom",
+                  horizontal: "right",
                 }}
               >
-                <p>Visual Search</p>
-                <div
-                  style={{
-                    display: "flex",
-                    cursor: "pointer",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    border: "1px dotted black",
-                    height: "250px",
-                    padding: "20px",
+                <Box
+                  sx={{
+                    width: "550px",
+                    height: "300px",
+                    padding: 2,
+                    paddingBottom: 12,
+                    borderRadius: 4,
                   }}
-                  {...getRootProps({ className: "dropzone" })}
                 >
-                  <ImageSearchIcon sx={{ fontSize: "90px" }} />
-                  <input {...getInputProps()} onInput={navifn()} />
-                  <h2 style={{ color: "grey" }}>
-                    Drag and Drop your image here or browse file to search
-                  </h2>
-                </div>
-              </Box>
-            </Popover>
-          </search>
+                  <p>Visual Search</p>
+                  <div
+                    style={{
+                      display: "flex",
+                      cursor: "pointer",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      border: "1px dotted black",
+                      height: "250px",
+                      padding: "20px",
+                    }}
+                    {...getRootProps({ className: "dropzone" })}
+                  >
+                    <ImageSearchIcon sx={{ fontSize: "90px" }} />
+                    <input {...getInputProps()} onInput={navifn()} />
+                    <h2 style={{ color: "grey" }}>
+                      Drag and Drop your image here or browse file to search
+                    </h2>
+                  </div>
+                </Box>
+              </Popover>
+            </search>
+          </div>
+
           <button
             className="onHovera"
             onClick={handleClick3}
@@ -281,7 +284,7 @@ export const Navbar1 = () => {
             </>
           )}
 
-          <label htmlFor="contained-button-file">
+          <label className="submit_label" htmlFor="contained-button-file">
             <Input
               disabled={logedIn ? false : true}
               onChange={HandleSubmit}
@@ -391,12 +394,13 @@ export const Navbar1 = () => {
                   vertical: "bottom",
                   horizontal: "left",
                 }}
+                
               >
                 <Box
                   sx={{
                     display: "flex",
                     padding: "20px 30px 20px 40px",
-                    width: "20%",
+                    width: "25%",
                   }}
                 >
                   <Box sx={{ paddingRight: 3 }}>
@@ -404,8 +408,8 @@ export const Navbar1 = () => {
                       sx={{
                         display: "flex",
                         alignItems: "center",
-                        marginBottom: -2,
                       }}
+                      className="menu_data"
                     >
                       <CorporateFareIcon fontSize={"small"} />
                       <h4 style={{ marginLeft: 6 }}>Company</h4>
@@ -422,8 +426,8 @@ export const Navbar1 = () => {
                       sx={{
                         display: "flex",
                         alignItems: "center",
-                        marginBottom: -2,
                       }}
+                      className="menu_data"
                     >
                       <CategoryIcon fontSize={"small"} />
                       <h4 style={{ marginLeft: 6 }}>Product</h4>
@@ -438,8 +442,8 @@ export const Navbar1 = () => {
                       sx={{
                         display: "flex",
                         alignItems: "center",
-                        marginBottom: -2,
                       }}
+                      className="menu_data"
                     >
                       <PeopleIcon fontSize={"small"} />
                       <h4 style={{ marginLeft: 6 }}>Community</h4>
