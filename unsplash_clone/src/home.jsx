@@ -13,7 +13,7 @@ import axios from "axios";
 import search from "./components/search";
 import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
-var index = 1;
+var index = Math.floor(Math.random() * 100) + 1;
 function Home() {
   const [images, setImage] = useState([]);
   // const [search, setsearch] = useState([]);
@@ -74,7 +74,7 @@ function Home() {
         console.log(res.data);
         setimage3([...images3, ...res.data.results]);
       });
-    index += 3;
+    index = Math.floor(Math.random() * 100) + 1;
     if (images.length === 0) {
         console.log(images.length)
         setnoresult(true);

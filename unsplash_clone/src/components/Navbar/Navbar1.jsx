@@ -40,9 +40,10 @@ export const Navbar1 = () => {
       }));
       
       const SearchIconWrapper = styled('div')(({ theme }) => ({
-        padding: theme.spacing(0, 2),
-        height: '100%',
-        position: 'absolute',
+        // padding: theme.spacing(0, 2),
+        height: '60%',
+        // position: 'absolute',
+        paddingTop: 20,
         color: "#757575",
         pointerEvents: 'none',
         display: 'flex',
@@ -56,9 +57,9 @@ export const Navbar1 = () => {
           padding: theme.spacing(1, 1, 1, 0),
           paddingLeft: `calc(1em + ${theme.spacing(4)})`,
           transition: theme.transitions.create('width'),
-          width: '100%',
+          // width: '100%',
           [theme.breakpoints.up('lg')]: {
-            width: '510px',
+            width: '100%',
           },
         },
       }));
@@ -176,67 +177,72 @@ export const Navbar1 = () => {
           }}
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf31fI-8KqbQk8HKfgCdJTZ_ZpMe1bdtKArA&usqp=CAU"
         />
-
-        <Search className="nav_search">
+        <div className="nav1_search">
           <SearchIconWrapper>
             <SearchIcon />
           </SearchIconWrapper>
-          <StyledInputBase placeholder="Search free high-resolution photos" />
-          <Button onClick={handleClick3} aria-describedby={id3}>
-            <ImageSearchIcon
-              className="onHovera"
-              // sx={{
-              //   position: "relative",
-              //   display: "flex",
-              //   alignItems: "center",
-              //   padding: 1,
-              // }}
-            />
-          </Button>
-          <Popover
-            className={id3}
-            open={open3}
-            anchorEl={anchorEl3}
-            onClose={handleClose3}
-            anchorReference="anchorPosition"
-            anchorPosition={{ top: 75, left: 280 }}
-            anchorOrigin={{
-              vertical: "bottom",
-              horizontal: "right",
-            }}
-          >
-            <Box
-              sx={{
-                width: "400px",
-                height: "300px",
-                padding: 2,
-                paddingBottom: 12,
-                borderRadius: 4,
+          <search className="nav_search">
+            <StyledInputBase placeholder="Search free high-resolution photos" />
+
+            <Popover
+              className={id3}
+              open={open3}
+              anchorEl={anchorEl3}
+              onClose={handleClose3}
+              anchorReference="anchorPosition"
+              anchorPosition={{ top: 75, left: 80 }}
+              anchorOrigin={{
+                vertical: "bottom",
+                horizontal: "right",
               }}
             >
-              <p>Visual Search</p>
-              <div
-                style={{
-                  display: "flex",
-                  cursor: "pointer",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  border: "1px dotted black",
-                  height: "250px",
-                  padding: "20px",
+              <Box
+                sx={{
+                  width: "550px",
+                  height: "300px",
+                  padding: 2,
+                  paddingBottom: 12,
+                  borderRadius: 4,
                 }}
-                {...getRootProps({ className: "dropzone" })}
               >
-                <ImageSearchIcon sx={{ fontSize: "90px" }} />
-                <input {...getInputProps()} onInput={navifn()} />
-                <h2 style={{ color: "grey" }}>
-                  Drag and Drop your image here or browse file to search
-                </h2>
-              </div>
-            </Box>
-          </Popover>
-        </Search>
+                <p>Visual Search</p>
+                <div
+                  style={{
+                    display: "flex",
+                    cursor: "pointer",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    border: "1px dotted black",
+                    height: "250px",
+                    padding: "20px",
+                  }}
+                  {...getRootProps({ className: "dropzone" })}
+                >
+                  <ImageSearchIcon sx={{ fontSize: "90px" }} />
+                  <input {...getInputProps()} onInput={navifn()} />
+                  <h2 style={{ color: "grey" }}>
+                    Drag and Drop your image here or browse file to search
+                  </h2>
+                </div>
+              </Box>
+            </Popover>
+          </search>
+          <button
+            className="onHovera"
+            onClick={handleClick3}
+            aria-describedby={id3}
+          >
+            <ImageSearchIcon
+              sx={{
+                position: "relative",
+                display: "flex",
+                alignItems: "center",
+                // padding: 1,
+              }}
+            />
+          </button>
+        </div>
 
         <Box
           className="scroll"

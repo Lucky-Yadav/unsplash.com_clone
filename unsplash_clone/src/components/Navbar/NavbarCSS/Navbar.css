@@ -16,10 +16,21 @@
     justify-content: space-between;
     padding-top: 10px;
 }
-.nav_search {
+/* .nav_search {
     width: 100px;
+} */
+.nav1_search {
+    display: flex;
+    height: 40px;
+    width: auto;
 }
-
+.onHovera {
+    margin: 0%;
+    padding: 0%;
+    border: none;
+    outline: none;
+    /* background-color: #fefefe; */
+}
 
 .onHover{
     color:#757575;
