@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export const Navbar2 = () => {
 
     return (
-        <Box maxWidth={"1400px"} sx={{display:"flex", margin:"auto", paddingTop:0.8, paddingLeft:3, paddingRight:"4%", paddingBottom:2, alignItems:"center", justifyContent:"center", color:"#757575"}}>
+        <Box maxWidth={"100%"} sx={{display:"flex", margin:"auto", paddingTop:0.8, paddingLeft:3, paddingRight:"4%", paddingBottom:2, alignItems:"center", justifyContent:"center", color:"#757575"}}>
             <Link to="/" className="onHover">Editorial</Link>
             <Box sx={{color:"#7e7b7bd5", borderLeft:1, marginLeft:"10px", marginRight:"10px", borderColor:"#7e7b7bd5", height:30}}></Box>
 

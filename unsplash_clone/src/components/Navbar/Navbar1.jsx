@@ -171,7 +171,7 @@ export const Navbar1 = () => {
             position: "sticky",
             width: "55px",
             height: "55px",
-            left: 2,
+            left: 8,
             borderRadius: "50%",
           }}
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf31fI-8KqbQk8HKfgCdJTZ_ZpMe1bdtKArA&usqp=CAU"
