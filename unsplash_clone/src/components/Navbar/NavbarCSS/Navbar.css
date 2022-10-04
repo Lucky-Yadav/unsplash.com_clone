@@ -43,7 +43,9 @@
 .nav_search {
    flex-grow: 1;
 }
-
+.menu_box {
+    width: 80%;
+}
 .menu_data {
     margin-bottom: 10px;
 }

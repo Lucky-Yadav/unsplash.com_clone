@@ -1,4 +1,5 @@
 import React from "react";
+import logo  from './logo.png';
 import { Button, Box, InputBase } from "@mui/material"
 import { styled, alpha } from '@mui/material/styles';
 import SearchIcon from '@mui/icons-material/Search';
@@ -114,7 +115,7 @@ export const Navbar1 = () => {
 
 
       const open = Boolean(anchorEl);
-      const id = open ? 'simple-popover' : undefined;
+      const id = open ? 'simple-popover menu_box' : undefined;
 
       const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
@@ -170,12 +171,14 @@ export const Navbar1 = () => {
           alt="Logo"
           style={{
             position: "sticky",
-            width: "55px",
-            height: "55px",
-            left: 8,
-            borderRadius: "50%",
+            width: "35px",
+            marginTop: "8px",
+
+            height: "35px",
+            left: 14,
+            // borderRadius: "50%",
           }}
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf31fI-8KqbQk8HKfgCdJTZ_ZpMe1bdtKArA&usqp=CAU"
+          src={logo}
         />
         <div className="nav1_search">
           <SearchIconWrapper>
@@ -336,7 +339,7 @@ export const Navbar1 = () => {
                 />
               </Button>
               <Popover
-                className={id2}
+                className={id2} 
                 open={open2}
                 anchorEl={anchorEl2}
                 onClose={handleClose2}
