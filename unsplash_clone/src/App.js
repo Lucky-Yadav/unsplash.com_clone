@@ -17,8 +17,8 @@ function App() {
       {/* <Routes></Routes> */}
       {/* <Home /> */}
       <Routes>
-        <Route path="/" element={<Navbar ><Home/></Navbar>}></Route>
-        <Route path="/" element={<Home/> }></Route>
+        <Route path="/" element={<Navbar ><Home query = {"office"} /></Navbar>}></Route>
+        {/* <Route path="/" element={<Home/> }></Route> */}
         {/* <Route path="/error" element={<Error />}></Route> */}
         <Route path="/advertise" element={<Advertise />}></Route>
       </Routes>

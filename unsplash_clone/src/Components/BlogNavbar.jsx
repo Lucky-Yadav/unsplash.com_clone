@@ -41,7 +41,7 @@ export const BlogNavbar = () => {
           <a href="#">Community</a>
         </div>
         <div className="home-links">
-          <a href="">unsplash.com ↗</a>
+          <a href="/">unsplash.com ↗</a>
         </div>
       </div>
       {toggle ? (

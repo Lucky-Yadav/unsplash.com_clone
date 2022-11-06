@@ -239,7 +239,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="main">
+      <div className="main" onClick={handlesearchleave}>
         <div className={`${noresult == true ? "hidden" : " noresults"} `}>
           Results not found for "{serchvalue}"
         </div>
