@@ -105,8 +105,6 @@ function Home() {
       searchimage(e.target.value);
     }
   }
-
-
   function handlesearchleave(e) {
     // console.log(e);
     setsearchhovering(false);
