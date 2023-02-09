@@ -1,15 +1,14 @@
-
-import './App.css';
-import { Navbar } from "./components/Navbar/Navbar"
-import { Route, Routes } from 'react-router';
-import { SignUp } from './components/Auth/Signup';
-import { LogIn } from './components/Auth/Login';
+import "./App.css";
+import { Navbar } from "./Components/Navbar/Navbar";
+import { Route, Routes } from "react-router";
+import { SignUp } from "./Components/Auth/Signup";
+import { LogIn } from "./Components/Auth/Login";
 // import { Blog } from "./Pages/Blog";
 // import { Inputform } from './components/Advertise/Inputform';
 // import {Advertise} from "./Pages/Advertise";
 // import { SuccessForm } from "./components/Advertise/SuccessForm";
-import { Error } from "./components/Navbar/Error"
-import Home from './home';
+import { Error } from "./Components/Navbar/Error";
+import Home from "./home";
 
 function App() {
   return (
@@ -17,7 +16,14 @@ function App() {
       {/* <Routes></Routes> */}
       {/* <Home /> */}
       <Routes>
-        <Route path="/" element={<Navbar ><Home query = {"office"} /></Navbar>}></Route>
+        <Route
+          path="/"
+          element={
+            <Navbar>
+              <Home query={"office"} />
+            </Navbar>
+          }
+        ></Route>
         {/* <Route path="/" element={<Home/> }></Route> */}
         {/* <Route path="/error" element={<Error />}></Route> */}
         {/* <Route path="/advertise" element={<Advertise />}></Route> */}

@@ -4,13 +4,13 @@ import banner from "./banner.png";
 import heart from "./heart-black.svg";
 import squarespace from "./squarespace.svg";
 import React, { useState, useEffect } from "react";
-import { Loader } from "./components/Loader";
-import Search from "./components/search";
+import { Loader } from "./Components/Loader";
+import Search from "./Components/Search";
 import { Link } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
 import InfiniteScroll from "react-infinite-scroll-component";
 import axios from "axios";
-import search from "./components/search";
+import search from "./Components/Search";
 import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
 var index = Math.floor(Math.random() * 100) + 1;
@@ -21,8 +21,8 @@ function Home() {
   const [images2, setimage2] = React.useState([]);
   const [images3, setimage3] = React.useState([]);
   const [query, setquery] = React.useState("random");
-  const [noresult, setnoresult] = useState(false)
-  const [serchvalue, setserchvalue] = useState("your request")
+  const [noresult, setnoresult] = useState(false);
+  const [serchvalue, setserchvalue] = useState("your request");
   // const [banner, setbanner] = useState("second")
   // const [index, setindex] = React.useState([1]);
 
@@ -76,9 +76,9 @@ function Home() {
       });
     index = Math.floor(Math.random() * 100) + 1;
     if (images.length === 0) {
-        console.log(images.length)
-        setnoresult(true);
-      }
+      console.log(images.length);
+      setnoresult(true);
+    }
   };
 
   const [ishovering, setishovering] = useState(-1);
@@ -96,7 +96,7 @@ function Home() {
     setquery([value]);
     // FetchImages()
     console.log(value);
-    setserchvalue(value)
+    setserchvalue(value);
     handlesearchleave();
   };
   function handleKeyDown(e) {
