@@ -177,7 +177,7 @@ export const Navbar1 = () => {
           <SearchIcon />
         </SearchIconWrapper>
         <div className="search_rapper">
-          <search className="nav_search">
+          <Search className="nav_search">
             <StyledInputBase placeholder="Search free high-resolution photos" />
 
             <Popover
@@ -223,7 +223,7 @@ export const Navbar1 = () => {
                 </div>
               </Box>
             </Popover>
-          </search>
+          </Search>
         </div>
 
         <button

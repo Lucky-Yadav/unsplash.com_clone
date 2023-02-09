@@ -54,9 +54,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "comment": {
-    " in between 10_11 // @testing-library/react": "^18.2.0" 
   }
 }
-

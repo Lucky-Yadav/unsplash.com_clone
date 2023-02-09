@@ -5,14 +5,14 @@ import heart from "./heart-black.svg";
 import squarespace from "./squarespace.svg";
 import React, { useState, useEffect } from "react";
 import { Loader } from "./Components/Loader";
-import Search from "./Components/Search";
-import { Link } from "react-router-dom";
-import { Routes, Route } from "react-router-dom";
+// import Search from "./Components/Search";
+// import { Link } from "react-router-dom";
+// import { Routes, Route } from "react-router-dom";
 import InfiniteScroll from "react-infinite-scroll-component";
 import axios from "axios";
-import search from "./Components/Search";
-import styled from "styled-components";
-import { createGlobalStyle } from "styled-components";
+// import search from "./Components/Search";
+// import styled from "styled-components";
+// import { createGlobalStyle } from "styled-components";
 var index = Math.floor(Math.random() * 100) + 1;
 function Home() {
   const [images, setImage] = useState([]);
@@ -25,14 +25,6 @@ function Home() {
   const [serchvalue, setserchvalue] = useState("your request");
   // const [banner, setbanner] = useState("second")
   // const [index, setindex] = React.useState([1]);
-
-  useEffect(() => {
-    // if (images.length != 0) {
-
-    // }
-    FetchImages();
-    // alert("shown")
-  }, [setquery]);
 
   const FetchImages = (count = 10) => {
     // const apiRoot = "https://api.unsplash.com";
@@ -83,12 +75,12 @@ function Home() {
 
   const [ishovering, setishovering] = useState(-1);
   const [searchhovering, setsearchhovering] = useState(false);
-  const Datashow = styled.div`
-    // : gry;
-    :hover {
-      // background-color: grey;
-    }
-  `;
+  // const Datashow = styled.div`
+  //   // : gry;
+  //   :hover {
+  //     // background-color: grey;
+  //   }
+  // `;
   const searchimage = (value) => {
     setImage([]);
     setimage2([]);
@@ -113,6 +105,13 @@ function Home() {
     // console.log(e);
     setsearchhovering(true);
   }
+  useEffect(() => {
+    // if (images.length != 0) {
+
+    // }
+    FetchImages();
+    // alert("shown")
+  });
 
   return (
     <>
@@ -238,7 +237,7 @@ function Home() {
         </div>
       </div>
       <div className="main" onClick={handlesearchleave}>
-        <div className={`${noresult == true ? "hidden" : " noresults"} `}>
+        <div className={`${noresult === true ? "hidden" : " noresults"} `}>
           Results not found for "{serchvalue}"
         </div>
         <InfiniteScroll
@@ -264,7 +263,7 @@ function Home() {
                           <div className="kelbm">
                             <div
                               className={`ppjpj ${
-                                ishovering == image.id ? "backgr" : "hidden"
+                                ishovering === image.id ? "backgr" : "hidden"
                               } `}
                             >
                               <div className="top6">
@@ -295,7 +294,7 @@ function Home() {
                                   <a
                                     href={`${image.links.download}&force=true`}
                                     download
-                                    target="_blank"
+                                    // target="_blank"
                                   >
                                     <div className="svgjss4">
                                       <svg
@@ -341,7 +340,7 @@ function Home() {
                           <div className="kelbm">
                             <div
                               className={`ppjpj ${
-                                ishovering == image.id ? "" : "hidden"
+                                ishovering === image.id ? "" : "hidden"
                               } `}
                             >
                               <div className="top6">
@@ -372,7 +371,7 @@ function Home() {
                                   <a
                                     href={`${image.links.download}&force=true`}
                                     download
-                                    target="_blank"
+                                    // target="_blank"
                                   >
                                     <div className="svgjss4">
                                       <svg
@@ -418,7 +417,7 @@ function Home() {
                           <div className="kelbm">
                             <div
                               className={`ppjpj ${
-                                ishovering == image.id ? "" : "hidden"
+                                ishovering === image.id ? "" : "hidden"
                               } `}
                             >
                               <div className="top6">
@@ -449,7 +448,7 @@ function Home() {
                                   <a
                                     href={`${image.links.download}&force=true`}
                                     download
-                                    target="_blank"
+                                    // target="_blank"
                                   >
                                     <div className="svgjss4">
                                       <svg

@@ -7,7 +7,7 @@ import { LogIn } from "./Components/Auth/Login";
 // import { Inputform } from './components/Advertise/Inputform';
 // import {Advertise} from "./Pages/Advertise";
 // import { SuccessForm } from "./components/Advertise/SuccessForm";
-import { Error } from "./Components/Navbar/Error";
+// import { Error } from "./Components/Navbar/Error";
 import Home from "./home";
 
 function App() {
