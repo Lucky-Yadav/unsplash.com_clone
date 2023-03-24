@@ -32,6 +32,7 @@ function Home() {
     // }
     FetchImages();
     // alert("shown")
+    // eslint-disable-next-line
   }, [setquery]);
 
   const FetchImages = (count = 10) => {
