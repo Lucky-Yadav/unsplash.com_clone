@@ -1,5 +1,5 @@
 import "./App.css";
-import { Navbar } from "./Components/Navbar/Navbar";
+import Navbar  from "./Components/Navbar/Navbar";
 import { Route, Routes } from "react-router";
 // import { SignUp } from "./Components/Auth/Signup";
 // import { LogIn } from "./Components/Auth/Login";
