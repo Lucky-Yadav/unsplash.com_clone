@@ -26,6 +26,14 @@ function Home() {
   // const [banner, setbanner] = useState("second")
   // const [index, setindex] = React.useState([1]);
 
+  useEffect(() => {
+    // if (images.length != 0) {
+
+    // }
+    FetchImages();
+    // alert("shown")
+  }, [setquery]);
+
   const FetchImages = (count = 10) => {
     // const apiRoot = "https://api.unsplash.com";
     // const accessKey = process.env.REACT_APP_ACCESSKEY;
@@ -105,13 +113,6 @@ function Home() {
     // console.log(e);
     setsearchhovering(true);
   }
-  useEffect(() => {
-    // if (images.length != 0) {
-
-    // }
-    FetchImages();
-    // alert("shown")
-  });
 
   return (
     <>
