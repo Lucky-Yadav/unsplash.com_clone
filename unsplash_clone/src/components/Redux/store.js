@@ -3,7 +3,7 @@ import { AuthReducer } from "./reducer";
 
 // export const store = createStore(AuthReducer);
 
-import {  createStore } from "redux";
+import { createStore } from "redux";
 
 // const rootReducer = combineReducers({
 //     auth: authReducer

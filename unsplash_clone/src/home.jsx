@@ -4,7 +4,7 @@ import banner from "./banner.png";
 import heart from "./heart-black.svg";
 import squarespace from "./squarespace.svg";
 import React, { useState, useEffect } from "react";
-import { Loader } from "./Components/Loader";
+import { Loader } from "./components/Loader";
 // import Search from "./Components/Search";
 // import { Link } from "react-router-dom";
 // import { Routes, Route } from "react-router-dom";
